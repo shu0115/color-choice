@@ -1,0 +1,24 @@
+
+<p><%= link_to( "Top", root_path ) %></p>
+
+<table>
+  <tr>
+    <th>logo</th>
+    <th>headline</th>
+    <th>text</th>
+    <th>header</th>
+    <th>background</th>
+    <th>created_at</th>
+  </tr>
+
+<% @colors.each do |color| %>
+  <tr>
+    <td><%= color.logo %></td>
+    <td><%= color.headline %></td>
+    <td><%= color.text %></td>
+    <td><%= color.header %></td>
+    <td><%= color.background %></td>
+    <td><%= color.created_at.strftime("%Y/%m/%d %H:%M") %></td>
+  </tr>
+<% end %>
+</table>

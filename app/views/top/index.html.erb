@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <link href="./assets/style.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="./assets/jquery-1.8.3.min.js"></script>
+    <script src="./assets/script.js"></script>
+    <title>My Gem: Getting Started</title>
+  </head>
+  <body id="contents">
+  <header id="header">
+    <div class="container">
+    <h1 id="logo">My Gem <span class="announce">Click here or Keydown "p" to toggle color picker.</span></h1>
+      <a class="toc-nav-link icon-arrow-down" href="index.html#toc">Menu</a>
+    </div>
+  </header>
+  <div class="container">
+    <nav id="toc">
+      <div class="toc-block">
+        <h3>Getting Started</h3>
+        <ul>
+          <li><a href="/">About My Gem</a></li>
+          <li><a href="/">Getting Started</a></li>
+          <li><a href="/">My Gem Changelog</a></li>
+        </ul>
+      </div>
+
+      <div class="toc-block">
+        <h3>Usage</h3>
+        <ul>
+          <li><a href="/">Lorem ipsum dolor sit</a></li>
+          <li><a href="/">Pro at justo commune</a></li>
+          <li><a href="/">Quas euismod qui an</a></li>
+          <li><a href="/">Dicta fierent no his</a></li>
+          <li><a href="/">Meis inani te cum</a></li>
+          <li><a href="/">Ponderum assueverit cu</a></li>
+        </ul>
+      </div>
+
+      <div class="toc-block">
+        <h3>Metadata</h3>
+        <ul>
+          <li><a href="/">Sit qualisque</a></li>
+          <li><a href="/">Hendrerit te</a></li>
+          <li><a href="/">Ne sit torquatos</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <article id="main">
+      <h1>Getting Started</h1>
+
+      <p>Lorem ipsum dolor sit amet, id vel dico electram qualisque, vidit ocurreret eum an. Mel insolens instructior concludaturque ex. Cu reque abhorreant eum, et sea tation noster utamur. Ea his periculis inciderint.</p>
+
+      <p>Eum quas accusata iracundia at. Ei integre eruditi argumentum eum, omnesque indoctum posidonium ne eam. Errem feugait reprehendunt mel ne, no natum ignota scribentur sit, scripta incorrupte usu no. Autem quodsi et qui.</p>
+
+
+      <h2>Starting a New Project: My Gem</h2>
+
+      <p>Lorem ipsum dolor sit amet, id vel dico electram qualisque, vidit ocurreret eum an. Mel insolens instructior concludaturque ex. Cu reque abhorreant eum, et sea tation noster utamur. Ea his periculis inciderint.</p>
+
+      <p>Eum quas accusata iracundia at. Ei integre eruditi argumentum eum, omnesque indoctum posidonium ne eam. Errem feugait reprehendunt mel ne, no natum ignota scribentur sit, scripta incorrupte usu no. Autem quodsi et qui.</p>
+
+      <h3>The Feature</h3>
+
+      <p>Lorem ipsum dolor sit amet, pro at justo commune copiosae, quas euismod qui an. Et dicta percipitur reformidans usu, dicta fierent no his. Meis inani te cum, ponderum assueverit cu duo. No vocent commune quo, purto justo pericula eu per. Ius putent commodo euripidis in, eligendi appetere ne ius.</p>
+
+      <p>Sit qualisque hendrerit te, ne sit torquatos interpretaris. Ius graece option legimus an, vix summo dolorem blandit an. Nisl patrioque quo ad. Ut duo augue paulo, fabulas sapientem ne mea, ut duo detraxit salutandi definiebas. Pro at unum petentium, meliore consetetur has in, et mutat percipit vim. In eruditi fabellas vis, ex eruditi legimus necessitatibus quo. Eos in alterum ceteros adipiscing, te accumsan pertinacia instructior ius.</p>
+
+      <p>At ipsum scripta efficiantur nec. Perpetua vituperata quaerendum vix ne, pri ne veri liber apeirian. Vidisse lucilius facilisi ei vix, vim ei quod esse atqui, error placerat molestiae eam cu. Denique albucius quo ad, eos eu malis assum.</p>
+
+      <h4>Gemfile</h4>
+
+      <p>At malis laoreet his. Ex vix prima primis, ne qui iudico alienum. Te enim iriure fuisset eos, ei mei nihil saepe soleat, has alienum postulant in. Quem accusamus constituam qui ea, id dolorum expetendis per. Vis in ferri quaeque. Suscipit phaedrum vulputate cum eu. Usu te quot ignota timeam, ex sed magna nusquam, ex eum esse omnis.</p>
+
+      <h4>config.ru</h4>
+
+      <p>Quo cu hinc purto quando. Eu eam nobis complectitur, eam nobis percipit in. Case aperiam ancillae in nam. Ea alia veniam mel, in eum propriae intellegat. Suas vocent pri ne, te quod cibo vim.</p>
+
+      <p>Sit nulla complectitur an, mea hinc decore tacimates id. Te eum movet nostrum prodesset, pri at aliquip facilis. Quas everti at pri, cum te cibo nobis delectus. Te ius oratio populo platonem, nec ex facer possim. Stet oratio mea ea, inimicus efficiendi ex pri.</p>
+
+    </article>
+
+    <div id="support">
+    <ul class="pickto">
+      <li data-target="#logo" data-type="color" data-column="logo">ロゴの色</li>
+      <li data-target="h1_h2_h3_h4_h5_h6" data-type="color" data-column="headline">見出し色</li>
+      <li data-target="#text_p_a" data-type="color" data-column="text">本文の文字色</li>
+      <li data-target="#header" data-type="backgroundColor" data-column="header">ヘッダー色</li>
+      <li data-target="#contents" data-type="backgroundColor" data-column="background">サイト全体の背景色</li>
+      <li>
+        <%= form_tag( "top/color_save" ) do %>
+          <%= hidden_field_tag( "color[logo]", "" ) %>
+          <%= hidden_field_tag( "color[headline]", "" ) %>
+          <%= hidden_field_tag( "color[text]", "" ) %>
+          <%= hidden_field_tag( "color[header]", "" ) %>
+          <%= hidden_field_tag( "color[background]", "" ) %>
+
+          <%= submit_tag '保存' %>
+        <% end %>
+      </li>
+    </ul>
+
+    <ul class="color-sample">
+      <li class="bgcolor-E1DBC9">#E1DBC9</li>
+      <li class="bgcolor-C5BFB0">#C5BFB0</li>
+      <li class="bgcolor-746643">#746643</li>
+      <li class="bgcolor-3F3724">#3F3724</li>
+      <li class="bgcolor-3F5466">#3F5466</li>
+      <li class="bgcolor-062737">#062737</li>
+      <li class="bgcolor-1586BF">#1586BF</li>
+      <li class="bgcolor-FFF1C6">#FFF1C6</li>
+      <li class="bgcolor-F1BD3D">#F1BD3D</li>
+      <li class="bgcolor-B68299">#B68299</li>
+      <li class="bgcolor-982365">#982365</li>
+      <li class="bgcolor-E0EC8F">#E0EC8F</li>
+      <li class="bgcolor-61B816">#61B816</li>
+    </ul>
+    </div>
+
+</div>
+
+    <footer id="footer">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2012 <a href="/">My name</a>.
+        </p>
+        <p class="link"><a href="/">Fork and edit this guide on Github</a></p>
+      </div>
+    </footer>
+
+  </body>
+</html>
